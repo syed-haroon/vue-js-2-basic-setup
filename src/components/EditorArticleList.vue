@@ -1,0 +1,24 @@
+<template>
+  <div class="px-15 h-100">
+    <div class="row h-100">
+      <div class="main-col col h-100 has-v-scroll">
+        <div class="">
+Its working
+
+          {% include "/views/partials/filter-articles.html" %}
+          {% include "/views/partials/list-articles.html" %}
+
+        </div>
+      </div>
+
+      <!--{% include "/views/partials/col-aside-details.html" %}-->
+
+    </div>
+  </div>
+</template>
+
+<script>
+  export default {
+    name: 'editor-article-list'
+  }
+</script>

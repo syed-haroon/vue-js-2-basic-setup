@@ -1,0 +1,14 @@
+<meta charset="utf-8">
+<meta name="viewport" content=" width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta content="IE=Edge" http-equiv="X-UA-Compatible">
+
+<meta property="og:description" content="{% if doc.description %} {{doc.description}} {% else %} {{domainDefaultDescription}} {% endif %}">
+<meta name="description" content="{% if doc.description %} {{doc.description}} {% else %} {{domainDefaultDescription}} {% endif %}">
+
+<title>{{doc.title}}</title>
+<link rel="shortcut icon" href="{{g.static(podspec.meta.favicon_path).url.path}}" type="image/x-icon" />
+<!--<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600" rel="stylesheet">-->
+
+<link rel="stylesheet" href="{{g.static('/dist/css/plugins-via-npm.min.css').url.path}}"/>
+<link rel="stylesheet" href="{{g.static('/dist/css/plugins.min.css').url.path}}"/>
+<link rel="stylesheet" href="{{g.static('/dist/css/main.min.css').url.path}}"/>

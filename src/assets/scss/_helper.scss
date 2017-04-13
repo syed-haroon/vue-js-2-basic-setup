@@ -1,0 +1,136 @@
+/* -----------------------------------------------
+ * General
+ * ----------------------------------------------- */
+
+.relative { position: relative }
+
+.w-full   { width: 100% }
+.h-full   { height: 100% }
+
+.w-22     { width: 22px }
+
+.px-15 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.has-v-scroll {
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+
+.mb-30 { margin-bottom: 30px }
+
+.mx-minus-15 {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.row-xs {
+  margin-left: -5px;
+  margin-right: -5px;
+
+  .col, [class^='col-'] {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+.bdr { border: 1px solid rgba(0,0,0,.125); }
+.p-relative { position: relative; }
+
+.zi-1 {z-index: 1}
+.zi-2 {z-index: 2}
+
+.bg-white {background-color: #fff}
+
+.profile-photo {
+  width:40px; height:40px;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center center;
+}
+.profile {
+  color: $color-white !important;
+}
+
+/* -----------------------------------------------
+ * Bootstrap Kinda Style and Override
+ * ----------------------------------------------- */
+.bg-faded {
+  background-color: #DDD;
+}
+
+.bottom-border-light {
+  border-bottom: 1px solid #DDD;
+}
+
+.btn-outline-primary {
+  &:focus,
+  &.focus {
+    box-shadow:none;
+  }
+}
+
+/*
+*/
+/* -----------------------------------------------
+ * Flex
+ * ----------------------------------------------- *//*
+
+
+.row-flex {
+  display: flex;
+
+  &.align-center {
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (min-width: $screen-xs) {
+    &.align-center-lg {
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &.flex-direction-col {
+    flex-direction: column
+  }
+
+  .col {
+    flex-grow: 1;
+    flex-basis: 0;
+  }
+
+  .col.col-2 {
+    flex-grow: 2;
+  }
+}
+
+@media (min-width: $screen-sm) {
+  .row-flex-lg {
+    display: flex;
+
+    .col {
+      flex-grow: 1;
+      flex-basis: 0;
+    }
+
+    &.align-center-lg {
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+@media (max-width: $screen-xs-max) {
+  &.flex-direction-col-xs {
+    flex-direction: column;
+  }
+
+  &.flex-direction-col-reverse-xs {
+    flex-direction: column-reverse
+  }
+}
+*/

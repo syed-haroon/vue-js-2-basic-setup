@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% set domainDefaultDescription = "McClatchy Newsroom Reports" %}
+  {% set userName = "Joyce Terhaar" %}
+  {% set userRole = "Editor" %}
+  {% set userPhoto = "/assets/images/users/joyce-terhaar.jpg" %}
+  {% set isEditor = true %}
+  {% set isReporter = false %}
+
+  {% if doc.url.path == "/reporter" %}
+    {% set userName = "Christopher Cadelago" %}
+    {% set userRole = "Reporter" %}
+    {% set userPhoto = "/assets/images/users/christopher-cadelago.jpg" %}
+    {% set isEditor = false %}
+    {% set isReporter = true %}
+  {% endif %}
+  <head>
+    {% include "/views/partials/head.html" %}
+  </head>
+
+  <body>
+  {% include "/views/partials/nav-top.html" %}
+
+  <div class="container-fluid p-0">
+      <div class="row no-gutters">
+        {% include "/views/partials/nav-main.html" %}
+        <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2">
+          {% block main %}
+            {{doc.html|render|safe}}
+          {% endblock %}
+        </main>
+      </div>
+    </div>
+    <script src="{{g.static('/dist/js/plugins.min.js').url.path}}"></script>
+    <script src="{{g.static('/dist/js/main.min.js').url.path}}"></script>
+  </body>
+</html>

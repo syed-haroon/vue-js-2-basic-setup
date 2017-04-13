@@ -1,0 +1,31 @@
+<nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-primary">
+  <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsNavs" aria-controls="navbarsNavs" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">
+    <img src="/assets/images/layout/mcclatchy-logo-horizontal-white.svg" alt="McClatchy"/>
+  </a>
+
+  <div class="collapse navbar-collapse" id="navbarsNavs">
+    <div class="ml-auto mt-2 mt-md-0">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle d-flex p-0 profile" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="profile-pic-wrap mr-2">
+              <div style="background-image:url({{userPhoto}})" class="rounded-circle profile-photo" alt="Generic placeholder thumbnail"></div>
+            </div>
+            <div>
+              <div>{{userName}}</div>
+              <div class="small">{{userRole}}</div>
+            </div>
+          </a>
+
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Profile</a>
+            <a class="dropdown-item" href="#">Sign Out</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

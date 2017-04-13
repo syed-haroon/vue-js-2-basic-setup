@@ -1,0 +1,66 @@
+<nav class="navbar navbar-light bottom-border-light mb-2">
+  {% if isReporter == true %}
+  <form>
+    <div class="row row-xs">
+      <div class="col-2 mb-2">
+        <select class="selectpicker" multiple title="Status" data-style="btn-secondary" data-width="100%">
+          <option value="">All</option>
+          <option value="">Needs Review</option>
+          <option value="">Complete</option>
+        </select>
+      </div>
+      <div class="col-2 mb-2">
+        <select class="selectpicker" show-tick title="Date" data-style="btn-secondary" data-width="100%">
+          <option value="">This Week</option>
+          <option value="">Last Week</option>
+          <option value="">This Month</option>
+          <option value="">Last Month</option>
+        </select>
+      </div>
+      <div class="col mb-2">
+        <input class="form-control" type="text" placeholder="Search">
+      </div>
+      <div class="col-2">
+        <button class="btn btn-success btn-block" type="submit">Apply</button>
+      </div>
+    </div>
+  </form>
+  {% endif %}
+
+  {% if isEditor == true %}
+  <form>
+    <div class="row row-xs">
+      <div class="col-4 mb-2">
+        <select class="selectpicker" multiple title="Status" data-style="btn-secondary" data-width="100%">
+          <option value="">Needs Review</option>
+          <option value="">Complete</option>
+        </select>
+      </div>
+      <div class="col-4 mb-2">
+        <select class="selectpicker" show-tick title="Date" data-style="btn-secondary" data-width="100%">
+          <option value="">This Week</option>
+          <option value="">Last Week</option>
+          <option value="">This Month</option>
+          <option value="">Last Month</option>
+        </select>
+      </div>
+      <div class="col-4 mb-2">
+        <select class="selectpicker" multiple title="Reporter" data-style="btn-secondary" data-width="100%" data-live-search="true">
+          <option value="">Christopher Cadelago</option>
+          <option value="">Ellen Garrison</option>
+          <option value="">Jose Luis Villegas</option>
+          <option value="">Hector Amezcua</option>
+        </select>
+      </div>
+    </div>
+    <div class="row row-xs">
+      <div class="col-8 mb-2">
+        <input class="form-control" type="text" placeholder="Search">
+      </div>
+      <div class="col-4">
+        <button class="btn btn-success btn-block" type="submit">Apply</button>
+      </div>
+    </div>
+  </form>
+  {% endif %}
+</nav>

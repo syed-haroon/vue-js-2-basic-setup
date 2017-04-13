@@ -1,0 +1,90 @@
+<div class="col-aside-details col-5 bg-faded" hidden>
+  <div class="pb-3">
+    <div class="pt-4 pb-3 details-title w-100">
+      <button class="btn btn-link btn-sm pull-right js-close-col-aside-details"><i class="fa fa-times"></i></button>
+      <h6 class="mb-0 pt-1">When it comes to roads and dams, Jerry Brown isn’t always a Trump resister.</h6>
+    </div>
+
+    <div id="analytic-chart" class="analytic-chart">
+      <img class="rounded w-100 bdr" src="/assets/images/sample-chart-3.png" alt="Chart"/>
+    </div>
+
+    <div class="pt-3">
+      <div class="card">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item no-gutters">
+            <div class="col">
+              {{ 'Editor' if isEditor }}
+              {{ 'Reporter' if isReporter }}
+            </div>
+            <div class="col-auto p-relative">
+              <div data-toggle="buttons" class="js-btns-review zi-1 p-relative border-bottom-0">
+                <label id="btn-review-one" class="btn btn-outline-primary mb-0" data-toggle="tooltip" data-placement="top" title="Break news that holds leaders or institutions accountable">
+                  <input type="checkbox" autocomplete="off"> 1
+                </label>
+                <label id="btn-review-two" class="btn btn-outline-primary mb-0" data-toggle="tooltip" data-placement="top" title="Break news that makes a concrete difference in the community">
+                  <input type="checkbox" autocomplete="off"> 2
+                </label>
+                <label id="btn-review-three" class="btn btn-outline-primary mb-0" data-toggle="tooltip" data-placement="top" title="Tell readers how something will directly affect their lives or the lives of their families or friends">
+                  <input type="checkbox" autocomplete="off"> 3
+                </label>
+                <label id="btn-review-four" class="btn btn-outline-primary mb-0 mr-2" data-toggle="tooltip" data-placement="top" title="Use extraordinary, revelatory storytelling to help readers understand a consequential societal issue in new ways">
+                  <input type="checkbox" autocomplete="off"> 4
+                </label>
+                <label id="btn-review-none" class="btn btn-outline-primary mb-0">
+                  <input type="checkbox" autocomplete="off"> None
+                </label>
+              </div>
+              <div class="btn-group btn-group-sm btn-group-submit zi-2 bg-white" hidden>
+                <button id="btn-reset-review" type="button" class="btn btn-secondary"><i class="fa fa-times"></i></button>
+                <button id="btn-submit-review" type="button" class="btn btn-success"><i class="fa fa-check"></i></button>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item no-gutters {{ 'pb-5' if isEditor }}">
+            <div class="col">
+              {{ 'Reporter' if isEditor }}
+              {{ 'Editor' if isReporter }}
+            </div>
+            <div class="col-auto p-relative {{ 'review-edit-active' if isEditor }}">
+              <div class="buttons-group">
+                <button class="btn btn-primary disabled">1</button>
+                <button class="btn btn-primary disabled">2</button>
+                <button class="btn btn-outline-primary disabled">3</button>
+                <button class="btn btn-outline-primary disabled mr-2">4</button>
+                <button class="btn btn-outline-primary disabled">None</button>
+              </div>
+
+              <div data-toggle="buttons" class="btn-group btn-group-sm btn-group-submit zi-2 bg-white" {{ 'hidden' if isReporter }}>
+                <label class="btn btn-outline-danger mb-0">
+                  <input type="radio" autocomplete="off"> <i class="fa fa-lock"></i> Locked
+                </label>
+                <label class="btn btn-outline-success mb-0 active">
+                  <input type="radio" autocomplete="off" checked> <i class="fa fa-unlock"></i> Unlocked
+                </label>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="comment-bar ui sticky py-3 bg-faded mx-minus-15 px-15">
+      <div class="card border-0">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item p-0 border-0">
+            <div class="input-group">
+              <textarea rows="2" placeholder="Type your comment" class="form-control"></textarea>
+              <span class="input-group-btn">
+                <button id="btn-submit-comment" type="button" class="btn btn-primary"><i class="fa fa-send"></i></button>
+              </span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  {% include "/views/partials/message.html" %}
+
+</div>
