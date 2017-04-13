@@ -1,4 +1,4 @@
-# mcclatchy-manage-reporter
+# manage-reporter
 
 > Manage Reporter
 
